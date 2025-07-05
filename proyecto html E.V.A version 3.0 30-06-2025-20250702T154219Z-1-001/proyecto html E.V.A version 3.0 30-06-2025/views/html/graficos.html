@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráficos Torta, Barras y Líneas</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container {
+      width: 400px;
+      height: 400px;
+      margin: 30px auto;
+    }
+    a {
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+  </style>
+  <link rel="stylesheet" href="/views/css/Style.css"> 
+</head>
+<body>
+  <div class="navbar">
+        <a href="PaginaWeb.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="integrantes.html">INTEGRANTES</a> 
+        <a href="centros.html">CENTROS DEPORTIVOS</a>
+        <a href="graficos.html">VALORACIONES</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+  <h2 style="text-align: center;">Gráfico de Calificaciones</h2>
+  <div class="chart-container">
+    <canvas id="graficoTorta"></canvas>
+  </div>
+
+  <h2 style="text-align: center;">Gráfico de Ingresos</h2>
+  <div class="chart-container">
+    <canvas id="graficoBarras"></canvas>
+  </div>
+
+  <h2 style="text-align: center;">Gráfico de Registros</h2>
+  <div class="chart-container">
+    <canvas id="graficoLineas"></canvas>
+  </div>
+
+  
+<a href="PaginaWeb.html">Volver Al Inicio</a>
+<script src="/controllers/JS/graficos.js"></script>
+</body>
+</html>
+
