@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - E.V.A</title>
+    <link rel="stylesheet" href="/views/css/Style.css"> 
+</head>
+<body>
+    <div class="navbar">
+        <a href="PaginaWeb.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="integrantes.html">INTEGRANTES</a> 
+        <a href="centros.html">CENTROS DEPORTIVOS</a>
+        <a href="graficos.html">VALORACIONES</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+    <h2 class="titulo">Registro</h2>
+
+    <div class="container">
+
+       
+        <div class="form-box2">
+            <h3>Registro de Usuario o Deportista</h3>
+            <form action="/controllers/consultas/registrousuario.php" method="POST" onsubmit="return validarUsuario();">
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico">
+                <input type="password" id="contraseña" name="contraseña" placeholder="Elige una contraseña">
+                <button type="submit">Formulario de Aceptación</button>
+            </form>
+        </div>
+
+
+        <div class="form-box">
+            <h3>Registro de Administrador de Centros Deportivos</h3>
+            <form action="/controllers/consultas/registroadminc.php" method="POST" onsubmit="return validarAdmin();">
+                <button type="button" class="google-btn">Sign up with Google</button>
+                <input type="text" id="nombreAdmin" name="nombreAdmin" placeholder="Tu nombre">
+                <input type="text" id="apellidoAdmin" name="apellidoAdmin" placeholder="Tu apellido">
+                <input type="email" id="correoAdmin" name="correoAdmin" placeholder="Tu correo electrónico">
+                <input type="password" id="contraseñaAdmin" name="contraseñaAdmin" placeholder="Elige una contraseña">
+                <textarea id="descripcion" name="descripcion" placeholder="Descripción breve del centro deportivo" maxlength="500" rows="4" style="resize: none;"></textarea>
+                    <div id="contadorDescripcion" style="text-align: right; font-size: 12px; color: #ffffff; margin-top: -10px; margin-bottom: 15px;">
+                        0 / 500 caracteres
+                    </div>
+                <input type="text" id="estado" name="estado" placeholder="Estado (Activo/Inactivo)">
+                <p>Usa al menos una letra, un número y siete caracteres. <style>p { color: #ffffff; }</style></p>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="volver-container">
+        <a href="/views/html/PaginaWeb.html" class="volver-btn">← Volver al Inicio</a>
+    </div>
+
+    <script src="/controllers/JS/validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Fondo de pantalla corregido */
+body {
+    background-image: url("/views/resources/fondo3.png");
+    background-size: contain; /* Evita cortes */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #0f1a1a;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #0e7825;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+/* Cuadro principal */
+.cuadro {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    padding: 60px 40px;
+    border-radius: 20px;
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', sans-serif;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cuadro:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+img {
+    width: 180px;            /* Aumenta el ancho */
+    height: auto;            /* Mantiene la proporción */
+    border-radius: 12px;     /* Bordes redondeados */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombras suaves */
+    object-fit: contain;     /* Se asegura de que la imagen no se deforme */
+}
+
+/* Título llamativo */
+.subtitle {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+/* Párrafo principal */
+.cuadro p {
+    font-size: 18px;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Botón */
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background-color: #00ff5e;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #00cc44;
+    transform: scale(1.05);
+}
+
+/* Minicuadros */
+.minicuadros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.minicuadro {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.minicuadro:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.minicuadro p {
+    color: white;
+    font-size: 17px;
+    margin: 0;
+}
+
