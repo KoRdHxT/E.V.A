@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Fondo de pantalla corregido */
+body {
+    background-image: url("/views/resources/fondo3.png");
+    background-size: contain; /* Evita cortes */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #0f1a1a;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #0e7825;
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+/* Cuadro principal */
+.cuadro {
+    background-color: rgba(147, 146, 146, 0.85);
+    color: black;
+    padding: 90px;
+    border-radius: 15px;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 18px;
+    text-align: justify;
+    backdrop-filter: blur(20px);
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    z-index: 4;
+}
+
+.cuadro:hover {
+    background-color: #9e9d9d;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Imagen */
+img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Botón */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #08ed04;
+    color: black;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #12a428;
+    transform: scale(1.05);
+}
+
+/* Beneficios */
+.minicuadros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.minicuadro {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #afb6bc;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    color: rgb(187, 187, 187);
+}
+
+.minicuadro:hover {
+    transform: scale(1.05);
+}
+
+.minicuadro p {
+    font-size: 18px;
+    font-family: 'Tahoma', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+
+.subtitle {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
