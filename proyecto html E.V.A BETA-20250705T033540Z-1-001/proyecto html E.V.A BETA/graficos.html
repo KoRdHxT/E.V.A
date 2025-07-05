@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráficos Torta, Barras y Líneas</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .chart-container {
+      width: 400px;
+      height: 400px;
+      margin: 30px auto;
+    }
+    a {
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+        <a href="PaginaWeb.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="integrantes.html">INTEGRANTES</a> 
+        <a href="centros.html">CENTROS DEPORTIVOS</a>
+        <a href="graficos.html">VALORACIONES</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+  <h2 style="text-align: center;">Gráfico de Calificaciones</h2>
+  <div class="chart-container">
+    <canvas id="graficoTorta"></canvas>
+  </div>
+
+  <h2 style="text-align: center;">Gráfico de Ingresos</h2>
+  <div class="chart-container">
+    <canvas id="graficoBarras"></canvas>
+  </div>
+
+  <h2 style="text-align: center;">Gráfico de Registros</h2>
+  <div class="chart-container">
+    <canvas id="graficoLineas"></canvas>
+  </div>
+
+  <script>
+    // === Gráfico de Torta ===
+    const ctxTorta = document.getElementById('graficoTorta').getContext('2d');
+    const graficoTorta = new Chart(ctxTorta, {
+      type: 'pie',
+      data: {
+        labels: ['5 estrellas', '4-3 estrellas', '2-1 estrellas'],
+        datasets: [{
+          label: 'Calificaciones',
+          data: [30, 45, 25],
+          backgroundColor: ['#4CAF50', '#fbfe4e', '#ff4242']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false
+      }
+    });
+
+    // === Gráfico de Barras ===
+    const ctxBarras = document.getElementById('graficoBarras').getContext('2d');
+    const graficoBarras = new Chart(ctxBarras, {
+      type: 'bar',
+      data: {
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+        datasets: [{
+          label: 'ingresos mensuales en la pagina web',
+          data: [120, 95, 82, 110, 102],
+          backgroundColor: '#36A2EB'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false
+      }
+    });
+
+    // === Gráfico de Líneas ===
+    const ctxLineas = document.getElementById('graficoLineas').getContext('2d');
+    const graficoLineas = new Chart(ctxLineas, {
+      type: 'line',
+      data: {
+        labels: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'],
+        datasets: [{
+          label: 'registros diarios',
+          data: [45, 22, 31, 54, 19],
+          borderColor: '#FF6384',
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          tension:0, 
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        scales: {
+  y: {
+    ticks: {
+      callback: function(value) {
+        return Number.isInteger(value) ? value : '';
+      }
+    }
+  }
+}
+
+      }
+    });
+  </script>
+<a href="PaginaWeb.html">Volver Al Inicio</a>
+</body>
+</html>
+

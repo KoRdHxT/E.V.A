@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - E.V.A</title>
+    <link rel="stylesheet" href="Style.css"> <!-- Asegúrate que esta ruta sea correcta -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="PaginaWeb.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="integrantes.html">INTEGRANTES</a> 
+        <a href="centros.html">CENTROS DEPORTIVOS</a>
+        <a href="graficos.html">VALORACIONES</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+    <h2 class="titulo">Registro</h2>
+
+    <div class="container">
+        <!-- Formulario usuario o deportista -->
+        <div class="form-box2">
+            <h3>Registro de Usuario o Deportista</h3>
+            <input type="text" id="nombre" placeholder="Tu nombre">
+            <input type="text" id="apellido" placeholder="Tu apellido">
+            <input type="email" id="correo" placeholder="Tu correo electrónico">
+            <input type="password" id="contrasena" placeholder="Elige una contraseña">
+            <button onclick="validarUsuario()">Formulario de Aceptación</button>
+        </div>
+
+        <!-- Formulario administrador -->
+        <div class="form-box">
+            <h3>Registro de Administrador de Centros Deportivos</h3>
+            <button class="google-btn">Sign up with Google</button>
+            <input type="text" id="nombreAdmin" placeholder="Tu nombre">
+            <input type="text" id="apellidoAdmin" placeholder="Tu apellido">
+            <input type="email" id="correoAdmin" placeholder="Tu correo electrónico">
+            <input type="password" id="contrasenaAdmin" placeholder="Elige una contraseña">
+            <p>Usa al menos una letra, un número y siete caracteres.</p>
+            <button onclick="validarAdmin()">Registrarse</button>
+        </div>
+    </div>
+    <div class="volver-container">
+    <a href="PaginaWeb.html" class="volver-btn">← Volver al Inicio</a>
+</div>
+
+
+    <script>
+        function soloLetras(texto) {
+            return /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(texto);
+        }
+
+        function correoValido(correo) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
+        }
+
+        function contrasenaValida(contra) {
+            return /^(?=.*[A-Z])(?=.*\d).{7,}$/.test(contra);
+        }
+
+        function validarUsuario() {
+            const nombre = document.getElementById("nombre").value.trim();
+            const apellido = document.getElementById("apellido").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const contrasena = document.getElementById("contrasena").value;
+
+            if (!soloLetras(nombre)) {
+                alert("Solo se permiten letras en el campo de nombre.");
+                return;
+            }
+
+            if (!soloLetras(apellido)) {
+                alert("Solo se permiten letras en el campo de apellido.");
+                return;
+            }
+
+            if (!correoValido(correo)) {
+                alert("Correo inválido. Usa el formato: ejemplo@correo.com");
+                return;
+            }
+
+            if (!contrasenaValida(contrasena)) {
+                alert("La contraseña debe tener al menos una mayúscula, un número y 7 caracteres.");
+                return;
+            }
+
+            alert("¡Formulario válido para usuario/deportista!");
+        }
+
+        function validarAdmin() {
+            const nombre = document.getElementById("nombreAdmin").value.trim();
+            const apellido = document.getElementById("apellidoAdmin").value.trim();
+            const correo = document.getElementById("correoAdmin").value.trim();
+            const contrasena = document.getElementById("contrasenaAdmin").value;
+
+            if (!soloLetras(nombre)) {
+                alert("Solo se permiten letras en el campo de nombre (admin).");
+                return;
+            }
+
+            if (!soloLetras(apellido)) {
+                alert("Solo se permiten letras en el campo de apellido (admin).");
+                return;
+            }
+
+            if (!correoValido(correo)) {
+                alert("Correo inválido. Usa el formato: ejemplo@correo.com");
+                return;
+            }
+
+            if (!contrasenaValida(contrasena)) {
+                alert("La contraseña debe tener al menos una mayúscula, un número y 7 caracteres.");
+                return;
+            }
+
+            alert("¡Formulario válido para administrador!");
+        }
+    </script>
+
+</body>
+</html>
