@@ -1,0 +1,328 @@
+.titulo {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+    margin: 40px auto 20px auto; /* CENTRADO */
+}
+
+/* Contenedor de formularios */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    /* Quitar el fondo blanco que cubre todo */
+    background-color: transparent; /* Anteriormente: #f7f9fc */
+    margin-top: 40px;
+}
+
+/* Caja de formulario */
+.form-box,
+.form-box2 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px 25px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Mayor espacio entre elementos */
+}
+
+/* Títulos internos */
+.form-box h3,
+.form-box2 h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #34495e;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Espacio uniforme inferior */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+/* Botones */
+button {
+    padding: 12px;
+    font-size: 15px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    font-weight: 600;
+    margin-top: 10px; /* Separación del último input */
+}
+
+/* Botón Google */
+.google-btn {
+    background-color: #db4437;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(219, 68, 55, 0.4);
+}
+
+.google-btn:hover {
+    background-color: #b33c2c;
+    box-shadow: 0 4px 12px rgba(179, 60, 44, 0.6);
+    transform: scale(1.05);
+}
+
+
+/* Texto informativo debajo del input (p) */
+.form-box p {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 780px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-box,
+    .form-box2 {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+
+/* Texto de ayuda */
+p {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: -5px;
+}
+
+/*agregado recientemente*/
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+}
+
+.box label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.box select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    transition: border 0.3s;
+}
+
+.box select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+.volver-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.volver-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.volver-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content: center;      
+  align-items: center;
+  height: auto;
+  gap: 550px;                
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.tarjeta {
+  font-size: 22px;
+  
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px #1a1a1a;
+  transition: all 0.5s ease;
+  text-align: justify;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta2 {
+  font-size: 22px;
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px #1a1a1a;
+  transition: all 0.5s ease;
+  text-align: justify;
+}
+
+.tarjeta2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.imagen-decorativa {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.imagen-decorativa:hover {
+  transform: scale(1.03);
+}
+
+/* Estilo base para toda la página */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Contenedor flexible para asegurar footer al fondo */
+.contenedor-pagina {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contenido-principal {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+/* Footer fijo al fondo si hay poco contenido */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+/* Texto centrado inferior antes del footer */
+.texto-objetivo {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  margin: 40px auto 20px auto;
+  padding: 20px;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .texto-objetivo {
+    font-size: 16px;
+  }
+
+  .footer-content {
+    font-size: 12px;
+  }
+}
+
+
+

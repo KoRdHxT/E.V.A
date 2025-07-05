@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - E.V.A</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    
+</head>
+<body>
+    <div class="navbar">
+        <a href="PaginaWeb.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="integrantes.html">INTEGRANTES</a> 
+        <a href="centros.html">CENTROS DEPORTIVOS</a>
+        <a href="graficos.html">VALORACIONES</a>
+        <a href="inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+    <h2 class="titulo">Registro</h2>
+
+    <div class="container">
+
+        <div class="form-box2">
+            <h3>Registro de Usuario o Deportista</h3>
+            <form  method="POST">
+                <input type="text" id="nombre" placeholder="Tu nombre">
+                
+                <input type="text" id="apellido" placeholder="Tu apellido">
+                
+                <input type="email" id="correo" placeholder="Tu correo electrónico">
+                
+                <input type="password" id="contraseña" placeholder="Elige una contraseña">
+
+                <input type="number" id="documento" placeholder="Número de documento">
+
+                <input type="text" id="direccion" placeholder="Tu dirección">
+
+                <input type="number" id="telefono" placeholder="Tu número de teléfono">
+
+
+                <button type="submit" onclick="validarUsuario()">Formulario de Aceptación</button>
+            </form>
+        </div>
+
+                
+        
+        <div class="form-box">
+            <h3>Registro de Administrador de Centros Deportivos</h3>
+            <form method="POST">
+                <button type="button" class="google-btn">Sign up with Google</button>
+                <input type="text" id="nombreCDAdmin" placeholder="Tu nombre">
+                
+                
+                <input type="email" id="correoAdmin" placeholder="Tu correo electrónico">
+                
+                <input type="password" id="contraseñaAdmin" placeholder="Elige una contraseña">
+
+                <input type="number" id="documentoAdmin" placeholder="Número de documento">
+
+                <input type="text" id="direccionAdmin" placeholder="Tu dirección">
+
+                <input type="number" id="telefonoAdmin" placeholder="Tu número de teléfono">
+                
+                <input type="text" id="descripcionCDAdmin" placeholder="Una Breve Descripcion del Centro Deportivo">
+                <p>Usa al menos una letra, un número y siete caracteres.</p>
+                <button type="submit" >Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <div class="volver-container">
+    <a href="PaginaWeb.html" class="volver-btn">← Volver al Inicio</a>
+</div>
+
+    <script src="../../controllers/JS/validacion.js"></script> 
+</body>
+</html>
