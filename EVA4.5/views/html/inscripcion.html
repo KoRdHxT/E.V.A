@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario - E.V.A</title>
+    <link rel="stylesheet" href="/EVA4.0/views/css/Style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/EVA4.0/views/html/PaginaWeb.html">INICIO</a>
+        <a href="/EVA4.0/views/html/nosotros.html">NOSOTROS</a>
+        <a href="/EVA4.0/views/html/integrantes.html">INTEGRANTES</a> 
+        <a href="/EVA4.0/views/html/centros.html">CENTROS DEPORTIVOS</a>
+        <a href="/EVA4.0/views/html/graficos.html">VALORACIONES</a>
+        <a href="/EVA4.0/views/html/inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+    <h2 class="titulo">Registro de Usuario</h2>
+
+    <div class="container">
+        <div class="form-box2">
+            <form action="/EVA4.0/controllers/consultas/registrousuario.php" method="POST" onsubmit="return validarUsuario();">
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Elige una contraseña" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="volver-container">
+        <a href="/EVA4.0/views/html/PaginaWeb.html" class="volver-btn">← Volver al Inicio</a>
+    </div>
+
+    <script src="/EVA4.0/controllers/JS/validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Admin - E.V.A</title>
+    <link rel="stylesheet" href="/EVA4.0/views/css/Style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/EVA4.0/views/html/PaginaWeb.html">INICIO</a>
+        <a href="/EVA4.0/views/html/nosotros.html">NOSOTROS</a>
+        <a href="/EVA4.0/views/html/integrantes.html">INTEGRANTES</a> 
+        <a href="/EVA4.0/views/html/centros.html">CENTROS DEPORTIVOS</a>
+        <a href="/EVA4.0/views/html/graficos.html">VALORACIONES</a>
+        <a href="/EVA4.0/views/html/inscripcion.html">INSCRIPCIÓN</a>
+    </div>
+
+    <h2 class="titulo">Registro de Administrador</h2>
+
+    <div class="container">
+        <div class="form-box">
+            <form action="/EVA4.0/controllers/consultas/registroadminc.php" method="POST" onsubmit="return validarAdmin();">
+                <button type="button" class="google-btn">Sign up with Google</button>
+                <input type="text" id="nombreAdmin" name="nombreAdmin" placeholder="Tu nombre">
+                <input type="text" id="apellidoAdmin" name="apellidoAdmin" placeholder="Tu apellido">
+                <input type="email" id="correoAdmin" name="correoAdmin" placeholder="Tu correo electrónico">
+                <input type="password" id="contrasenaAdmin" name="contrasenaAdmin" placeholder="Elige una contraseña">
+                <textarea id="descripcion" name="descripcion" placeholder="Descripción breve del centro deportivo" maxlength="500" rows="4" style="resize: none;"></textarea>
+                <div id="contadorDescripcion" style="text-align: right; font-size: 12px; color: #ffffff; margin-top: -10px; margin-bottom: 15px;">
+                    0 / 500 caracteres
+                </div>
+                <input type="text" id="estado" name="estado" placeholder="Estado (Activo/Inactivo)">
+                <p style="color: #ffffff;">Usa al menos una letra, un número y siete caracteres.</p>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="volver-container">
+        <a href="/EVA4.0/views/html/PaginaWeb.html" class="volver-btn">← Volver al Inicio</a>
+    </div>
+
+    <script src="/EVA4.0/controllers/JS/validacion.js"></script>
+</body>
+</html>
