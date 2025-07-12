@@ -1,25 +1,32 @@
 <?php
+include('../conexion/conexion.php'); 
 
-include('../conexion/conexion.php');
 
-if ($conexion->connect_error) {
-  die("Error de conexión: " . $conexion->connect_error);
+if ($mysqli->connect_error) {
+    die("Error de conexión: " . $mysqli->connect_error);
+}
+$nombre = $_POST['nombre'] ?? '';
+$apellido = $_POST['apellido'] ?? '';
+$correo = $_POST['correo'] ?? '';
+$contrasena = $_POST['contrasena'] ?? '';
+
+
+if (empty($nombre) || empty($apellido) || empty($correo) || empty($contrasena)) {
+    echo "Todos los campos son obligatorios.";
+    exit();
 }
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$correo = $_POST['correo'];
-$contrasena = $_POST['contrasena'];
-$numeroTelefonico = $_POST['numeroTelefonico'];
+// Consulta SQL
+$sql = "INSERT INTO usuario (nombre, apellido, correo, contrasena)
+        VALUES ('$nombre', '$apellido', '$correo', '$contrasena')";
 
-$sql = "INSERT INTO registros (nombre, apellido, correo, contrasena, numeroTelefonico)
-        VALUES ('$nombre', '$apellido', '$correo', '$contrasena', '$numeroTelefonico')";
-
-if ($conexion->query($sql) === TRUE) {
-  echo "Usuario registrado correctamente.";
+// Ejecuta la consulta 
+if ($mysqli->query($sql) === TRUE) {
+    header("Location: /EVA4.5/views/html/PaginaWeb.html");
+    exit(); 
 } else {
-  echo "Error: " . $sql . "<br>" . $conexion->error;
+    echo "Error al registrar: " . $mysqli->error;
 }
 
-$conexion->close();
+$mysqli->close();
 ?>

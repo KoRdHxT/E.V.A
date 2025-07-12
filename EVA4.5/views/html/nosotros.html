@@ -3,42 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Nosotros</title>
-    <link rel="stylesheet" href="/views/css/Style.css">
-    <link rel="stylesheet" href="/views/resources/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="/EVA4.5/views/css/Style.css">
+    
 </head>
 <body>
-    <div class="navbar">
-        <a href="PaginaWeb.html">INICIO</a>
-        <a href="nosotros.html">NOSOTROS</a>
-        <a href="integrantes.html">INTEGRANTES</a> 
-        <a href="centros.html">CENTROS DEPORTIVOS</a>
-        <a href="graficos.html">VALORACIONES</a>
-        <a href="inscripcion.html">INSCRIPCIÓN</a>
-    </div>
-
-    <div class="cuadro">
-        <h1 class="subtitle">¿Quiénes somos? Conócenos</h1>
-
-        <img src="/views/resources/logo E.V.A.jpeg" alt="Logo E.V.A">
-
-        <p>
-            <strong>E.V.A. (Entrenamiento Voluntario Activo)</strong> es una iniciativa que promueve el bienestar físico y mental a través del ejercicio, conectándote con los espacios deportivos más cercanos.
-        </p>
-
-        <div class="minicuadros">
-            <div class="minicuadro">
-                <p>Encuentra lugares cerca de ti</p>
-            </div>
-            <div class="minicuadro">
-                <p>Mejora tu salud física y mental</p>
-            </div>
-            <div class="minicuadro">
-                <p>Diviértete mientras te ejercitas</p>
+    <!-- NAVBAR MODERNA -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="PaginaWeb.html">
+                <i class="bi bi-house-door-fill me-2"></i> INICIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="nosotros.html">NOSOTROS</a>
+                    <a class="nav-link" href="integrantes.html">INTEGRANTES</a>
+                    <a class="nav-link" href="centros.html">CENTROS DEPORTIVOS</a>
+                    <a class="nav-link" href="graficos.html">VALORACIONES</a>
+                </div>
             </div>
         </div>
+    </nav>
 
-        <a href="/views/html/PaginaWeb.html" class="button">Volver al Inicio</a>
-    </div>
+    <main class="container py-5">
+        <div class="nosotros-glass shadow p-4 mx-auto">
+            <h1 class="subtitle text-center mb-4">¿Quiénes somos? Conócenos</h1>
+            <div class="text-center mb-4">
+                <img src="/EVA4.5/views/resources/logo E.V.A.jpeg" alt="Logo E.V.A" class="img-fluid rounded" style="max-width: 220px;">
+            </div>
+            <p class="mb-4 text-center descripcion-eva">
+                <span class="eva-nombre">E.V.A. (Entrenamiento Voluntario Activo)</span> es una iniciativa que promueve el bienestar físico y mental a través del ejercicio, conectándote con los espacios deportivos más cercanos.
+            </p>
+            <div class="row text-center mb-4">
+                <div class="col-md-4 mb-2">
+                    <div class="p-3 bg-success text-white rounded-3 h-100">Encuentra lugares cerca de ti</div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="p-3 bg-success text-white rounded-3 h-100">Mejora tu salud física y mental</div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="p-3 bg-success text-white rounded-3 h-100">Diviértete mientras te ejercitas</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="PaginaWeb.html" class="btn btn-success btn-glow"><i class="bi bi-arrow-left"></i> Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS (opcional, si necesitas funcionalidades de Bootstrap como el colapso de la navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

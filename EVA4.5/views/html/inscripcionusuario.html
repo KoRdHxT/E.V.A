@@ -35,14 +35,13 @@
 
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
         <main class="w-100" style="max-width: 420px;">
-            <h2 class="mb-4 text-center" style="background-color: lime; padding: 10px; border-radius: 10px; color: black;">Registro de Administrador deportivo</h2>
+            <h2 class="mb-4 text-center" style="background-color: lime; padding: 10px; border-radius: 10px; color: black;">Registro de Usuario</h2>
             <div class="form-box2 mx-auto">
-                <form action="/EVA4.5/controllers/consultas/registroadmin.php" method="POST" onsubmit="return validarAdmin();">
-                    <input type="text" id="nombreAdmin" name="nombreAdmin" class="form-control mb-3" placeholder="Tu nombre" required>
-                    <input type="text" id="apellidoAdmin" name="apellidoAdmin" class="form-control mb-3" placeholder="Tu apellido" required>
-                    <input type="email" id="correoAdmin" name="correoAdmin" class="form-control mb-3" placeholder="Tu correo electrónico" required>
-                    <input type="password" id="contrasenaAdmin" name="contrasenaAdmin" class="form-control mb-3" placeholder="Elige una contraseña" required>
-                    <input type="tel" id="numeroAdmin" name="numeroAdmin" class="form-control mb-3" placeholder="Tu teléfono" required>
+                <form action="/EVA4.5/controllers/consultas/registrousuario.php" method="POST" onsubmit="return validarUsuario();">
+                    <input type="text" id="nombre" name="nombre" class="form-control mb-3" placeholder="Tu nombre" required>
+                    <input type="text" id="apellido" name="apellido" class="form-control mb-3" placeholder="Tu apellido" required>
+                    <input type="email" id="correo" name="correo" class="form-control mb-3" placeholder="Tu correo electrónico" required>
+                    <input type="password" id="contrasena" name="contrasena" class="form-control mb-3" placeholder="Elige una contraseña" required>
                     <button type="submit" class="btn btn-success w-100 btn-glow">Registrar</button>
                 </form>
             </div>

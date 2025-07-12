@@ -10,6 +10,10 @@ function contrasenaValida(contra) {
     return /^(?=.*[A-Z])(?=.*\d).{7,}$/.test(contra);
 }
 
+function numeroValido(numero) {
+    return /^\d{10}$/.test(numero);
+}
+
 function validarUsuario() {
     const nombre = document.getElementById("nombre").value.trim();
     const apellido = document.getElementById("apellido").value.trim();
@@ -45,8 +49,8 @@ function validarAdmin() {
     const apellido = document.getElementById("apellidoAdmin").value.trim();
     const correo = document.getElementById("correoAdmin").value.trim();
     const contrasena = document.getElementById("contrasenaAdmin").value;
-    const descripcion = document.getElementById("descripcion").value.trim();
-    const estado = document.getElementById("estado").value.trim();
+    const numero = document.getElementById("numeroAdmin").value.trim();
+    
 
     if (!soloLetras(nombre)) {
         alert("Solo se permiten letras en el campo de nombre (admin).");
@@ -68,14 +72,18 @@ function validarAdmin() {
         return false;
     }
     
-    if (!soloLetras(descripcion)) {
-        alert("Solo se permiten letras en el campo de descripción (admin).");
+    if (!numeroValido(numero)) {
+        alert("Solo se permiten números en el campo de teléfono \"1234567890\" min/max 10 digitos(admin).");
         return false;
     }
     
-    if (descripcion.length > 500) {
-    alert("La descripción no puede superar los 500 caracteres.");
-    return false;
+    alert("¡Formulario válido para administrador!");
+    return true;
+}
+
+    /*if (descripcion.length > 500) {
+        alert("La descripción no puede superar los 500 caracteres.");
+        return false;
     }
     
     if (!soloLetras(estado)) {
@@ -97,6 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
+*/
 
 

@@ -1,8 +1,13 @@
-<?php 
-    /* Se realiza la conexión a la base de datos*/
-    $username = "root"; 
-    $password = ""; 
-    $database = "pruebaconexion"; 
-    $conexion = new mysqli("127.0.0.1", $username, $password, $database); 
+<?php
+$host = "localhost";
+$usuario = "root";
+$contrasena = "";
+$basededatos = "evadb2"; // el nombre de tu base de datos
 
+$mysqli = new mysqli($host, $usuario, $contrasena, $basededatos);
+
+// Verifica errores
+if ($mysqli->connect_error) {
+    die("Conexión fallida: " . $mysqli->connect_error);
+}
 ?>

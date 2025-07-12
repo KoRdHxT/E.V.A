@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.V.A</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="/EVA4.5/views/css/Style.css">
+  
+</head>
+<body>
+    <!-- NAVBAR MODERNA -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="PaginaWeb.html">
+                <i class="bi bi-house-door-fill me-2"></i> INICIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+                    <a class="nav-link" href="integrantes.html">INTEGRANTES</a>
+                    <a class="nav-link" href="centros.html">CENTROS DEPORTIVOS</a>
+                    <a class="nav-link" href="graficos.html">VALORACIONES</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin" width="100" class="mb-3">
+            <h1 class="ingreso" style="background:#21a12c; color:#fff; border-radius:16px; padding:16px;">
+                ¡Hola Administrador!<br>
+                Bienvenido a E.V.A, gestiona y vive el deporte.
+            </h1>
+            <p class="lead" style="color:#ffffff; font-weight:bold; font-size:1.5rem; text-shadow: 1px 1px 8px #21a12c;">
+                Accede rápidamente a las funciones principales:
+            </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-plus-circle-fill" style="font-size:2rem; color:#21a12c;"></i>
+                        <h5 class="card-title mt-2">Agregar Centro Deportivo</h5>
+                        <p class="card-text">Registra un nuevo centro deportivo en la plataforma.</p>
+                        <a href="agregar_centro.html" class="btn btn-success">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-pencil-square" style="font-size:2rem; color:#0d6efd;"></i>
+                        <h5 class="card-title mt-2">Ver/Editar Información</h5>
+                        <p class="card-text">Consulta y edita la información de tus centros deportivos.</p>
+                        <a href="editar_centro.html" class="btn btn-primary">Ver/Editar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body text-center">
+                        <i class="bi bi-bar-chart-fill" style="font-size:2rem; color:#ffc107;"></i>
+                        <h5 class="card-title mt-2">Ver Valoraciones</h5>
+                        <p class="card-text">Revisa las valoraciones y estadísticas de los centros.</p>
+                        <a href="graficos.html" class="btn btn-warning text-white">Ver Gráficos</a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- Eliminado el botón de agregar centro deportivo y los desplegables de la parte de abajo -->
+    </main>
+
+    <!-- Scripts -->
+    <script src="/EVA4.5/controllers/JS/validacion.js"></script>
+    <script src="/EVA4.5/controllers/JS/login.js"></script>
+    <script src="/EVA4.5/controllers/JS/volverInicio.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

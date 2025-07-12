@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Centro Deportivo | E.V.A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/EVA4.5/views/css/Style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="PaginaWeb.html">
+                <i class="bi bi-house-door-fill me-2"></i> INICIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="sesionadmin.html">ADMIN</a>
+                    <a class="nav-link" href="centros.html">CENTROS DEPORTIVOS</a>
+                    <a class="nav-link" href="graficos.html">VALORACIONES</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid py-5" style="max-width:100vw;">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-12">
+                <div class="card shadow-lg" style="background:rgba(0,0,0,0.85); color:#fff;">
+                    <div class="card-body">
+                        <h2 class="mb-4 text-center" style="color:#21a12c;">
+                            <i class="bi bi-plus-circle-fill"></i> Agregar Centro Deportivo
+                        </h2>
+                        <form action="/EVA4.5/controllers/consultas/registroadminc.php" method="POST">
+                            <div class="mb-3">
+                                <label for="nombreCentro" class="form-label">Nombre de Centro</label>
+                                <input type="text" class="form-control" id="nombreCentro" name="nombreCentro" placeholder="Ej: Polideportivo Sur" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correoCentro" class="form-label">Correo de Contacto</label>
+                                <input type="email" class="form-control" id="correoCentro" name="correoCentro" placeholder="Ej: contacto@centrodeportivo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="numeroCentro" class="form-label">Número</label>
+                                <input type="tel" class="form-control" id="numeroCentro" name="numeroCentro" placeholder="Ej: 3001234567" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contrasenaCentro" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contrasenaCentro" name="contrasenaCentro" placeholder="Crea una contraseña" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcionCentro" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="descripcionCentro" name="descripcionCentro" rows="3" placeholder="Describe brevemente el centro deportivo"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="estadoCentro" class="form-label">Estado</label>
+                                <select class="form-select" id="estadoCentro" name="estadoCentro" required>
+                                    <option value="" disabled selected>Selecciona el estado</option>
+                                    <option value="activo">Activo</option>
+                                    <option value="inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccionCentro" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccionCentro" name="direccionCentro" placeholder="Ej: Calle 123 #45-67" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success btn-lg"><i class="bi bi-plus-circle me-2"></i>Registrar Centro</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

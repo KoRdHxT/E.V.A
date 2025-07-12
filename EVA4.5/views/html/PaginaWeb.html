@@ -3,72 +3,298 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="/EVA4.0/views/css/Style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="/EVA4.5/views/css/Style.css">
 
     <title>E.V.A</title>
+    <style>
+        /* Glass effect for login box */
+        .glass-login {
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 24px;
+            color: #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        }
+        .slider-img {
+            height: 320px;
+            object-fit: cover;
+        }
+        .carousel-caption {
+            background: rgba(0,0,0,0.5);
+            border-radius: 12px;
+        }
+        .card-header {
+            background: #21a12c !important;
+            color: #fff !important;
+        }
+        .texto-objetivo {
+            background: rgba(0,0,0,0.7);
+            color: #fff !important;
+            border-radius: 16px;
+            padding: 25px;
+            font-size: 1.15rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .faq-card {
+            background: rgba(240,255,240,0.95);
+            border-radius: 18px;
+            transition: box-shadow 0.2s;
+        }
+        .faq-card:hover {
+            box-shadow: 0 8px 32px rgba(33,161,44,0.18);
+        }
+    </style>
 </head>
 
 <body>
-
 <div class="contenedor-pagina">
 
-    <div class="navbar">
-        <a href="PaginaWeb.html">INICIO</a>
-        <a href="nosotros.html">NOSOTROS</a>
-        <a href="integrantes.html">INTEGRANTES</a> 
-        <a href="centros.html">CENTROS DEPORTIVOS</a>
-        <a href="graficos.html">VALORACIONES</a>
-        <a href="inscripcion.html">INSCRIPCIÓN</a>
-        <a href="inscripcionadmin.html">REGISTRO ADMINISTRADOR</a>
-    </div>
-
-    <main class="contenido-principal">
-        <h1 class="titulo25">Bienvenidos a E.V.A</h1>
-        <a href="inscripcion.html" class="boton-registro">Registrarse ahora</a>
-
-        <div class="tarjetas">
-
-            <div class="bloque">
-                <div class="tarjeta">
-                    <h3>MISIÓN</h3>
-                    <p>Promover un estilo de vida activo y saludable en niños, jóvenes, adolescentes y adultos, reduciendo el sedentarismo a través de una plataforma digital que brinda información personalizada sobre centros deportivos, escuelas, gimnasios y actividades físicas cercanas a su ubicación. Facilitamos el acceso autónomo y ágil al registro de estas opciones desde dispositivos móviles, fomentando así la participación activa y constante en el deporte.</p>
+    <!-- NAVBAR MODERNA -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm mb-4">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="PaginaWeb.html">
+                <i class="bi bi-house-door-fill me-2"></i> INICIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+                    <a class="nav-link" href="integrantes.html">INTEGRANTES</a>
+                    <a class="nav-link" href="centros.html">CENTROS DEPORTIVOS</a>
+                    <a class="nav-link" href="graficos.html">VALORACIONES</a>
+                    <a class="nav-link" href="inscripcion.html">INSCRIPCIÓN</a>
                 </div>
-                <img src="/EVA4.0/views/resources/karate.jpeg" alt="izquierda" class="imageniz">
-            </div>    
+            </div>
+        </div>
+    </nav>
 
-            <div class="bloque"> 
-                <div class="tarjeta2">
-                    <h3>VISIÓN</h3>
-                    <p>Ser el punto de encuentro entre las personas y la actividad física, rompiendo las barreras del sedentarismo con una plataforma que transforma la manera en que se accede al deporte: rápida, intuitiva y al alcance de todos. Un espacio donde moverse, ejercitarse y cuidarse comienza con solo un clic desde cualquier dispositivo.</p>
+    <main class="container py-4">
+
+        <!-- Carrusel principal -->
+        <div class="d-flex flex-column align-items-center">
+            <div id="evaSlider" class="carousel slide mb-4 shadow rounded-top-4" data-bs-ride="carousel" style="max-width: 900px; width: 100%; overflow: hidden;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/EVA4.5/views/resources/karate.jpeg" class="d-block w-100 slider-img" style="height:440px;" alt="karate">
+                        <div class="carousel-caption d-flex flex-column justify-content-end align-items-center" style="bottom: 30px;">
+                            <div style="background:rgba(0,0,0,0.7); color:#fff; padding:16px 24px; border-radius:14px; font-size:1.5rem; font-weight:500; box-shadow:0 2px 12px rgba(0,0,0,0.18); width:80%; max-width:600px;">
+                                ¡Actívate con E.V.A!<br>
+                                Descubre deportes y centros cerca de ti.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/EVA4.5/views/resources/chispun.jpg" class="d-block w-100 slider-img" style="height:440px;" alt="ejercicio">
+                        <div class="carousel-caption d-flex flex-column justify-content-end align-items-center" style="bottom: 30px;">
+                            <div style="background:rgba(0,0,0,0.7); color:#fff; padding:16px 24px; border-radius:14px; font-size:1.5rem; font-weight:500; box-shadow:0 2px 12px rgba(0,0,0,0.18); width:80%; max-width:600px;">
+                                Salud y bienestar<br>
+                                Mejora tu salud física y mental.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/EVA4.5/views/resources/logo E.V.A.jpeg" class="d-block w-100 slider-img" style="height:440px;" alt="logo">
+                        <div class="carousel-caption d-flex flex-column justify-content-end align-items-center" style="bottom: 30px;">
+                            <div style="background:rgba(0,0,0,0.7); color:#fff; padding:16px 24px; border-radius:14px; font-size:1.5rem; font-weight:500; box-shadow:0 2px 12px rgba(0,0,0,0.18); width:80%; max-width:600px;">
+                                Únete a la comunidad E.V.A<br>
+                                Regístrate y vive el deporte.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img src="/EVA4.0/views/resources/chispun.jpg" alt="derecha" class="imagender">
+                <!-- Controles personalizados -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#evaSlider" data-bs-slide="prev" style="width:48px; height:48px; top:50%; transform:translateY(-50%); left:16px; background:rgba(33,161,44,0.85); border-radius:50%; border:none; opacity:0.85;">
+                    <span class="carousel-control-prev-icon" style="filter:invert(1);"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#evaSlider" data-bs-slide="next" style="width:48px; height:48px; top:50%; transform:translateY(-50%); right:16px; background:rgba(33,161,44,0.85); border-radius:50%; border:none; opacity:0.85;">
+                    <span class="carousel-control-next-icon" style="filter:invert(1);"></span>
+                </button>
+            </div>
+            <!-- Login Glass Box centrado debajo del carrusel -->
+            <div class="mx-auto p-4 text-center glass-login mb-5" style="max-width: 340px;">
+                <h1 class="mb-4" style="background-color: #21a12c; padding: 10px; border-radius: 10px; color: #fff;">Bienvenidos a E.V.A</h1>
+                <h3 class="mb-3">Iniciar Sesión</h3>
+                <form action="/EVA4.5/controllers/conexion/iniciodesesion.php" method="POST">
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="correo" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 btn-glow">Ingresar</button>
+                </form>
+                <a href="inscripcion.html" class="btn btn-outline-success w-100 mt-3 btn-glow">Registrarse ahora</a>
+            </div>
+        </div>
+
+        <!-- Recomendaciones deportivas -->
+        <section class="mt-5">
+            <h2 class="text-center mb-4 fw-bold text-success">Recomendaciones para tu bienestar</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-bicycle display-4 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">Haz ejercicio regularmente</h5>
+                            <p class="card-text">Dedica al menos 30 minutos al día a actividades físicas como caminar, correr, nadar o montar bicicleta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-emoji-smile display-4 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">Cuida tu salud mental</h5>
+                            <p class="card-text">El deporte ayuda a reducir el estrés y mejorar el ánimo. Practica meditación y mantén contacto con amigos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow border-0">
+                        <div class="card-body text-center">
+                            <i class="bi bi-geo-alt display-4 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">Explora nuevos lugares</h5>
+                            <p class="card-text">Descubre parques, centros deportivos y gimnasios cercanos para variar tu rutina y conocer nuevas personas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tarjetas MISIÓN y VISIÓN con imágenes -->
+        <div class="row mt-5 g-4 justify-content-center">
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+                <div class="card p-3 shadow" style="width: 100%; max-width: 600px;">
+                    <div class="card-header text-center fw-bold">MISIÓN</div>
+                    <div class="card-body">
+                        <p class="card-text">Promover un estilo de vida activo y saludable en niños, jóvenes, adolescentes y adultos, reduciendo el sedentarismo a través de una plataforma digital que brinda información personalizada sobre centros deportivos, escuelas, gimnasios y actividades físicas cercanas a su ubicación. Facilitamos el acceso autónomo y ágil al registro de estas opciones desde dispositivos móviles, fomentando así la participación activa y constante en el deporte.</p>
+                    </div>
+                </div>
+                <img src="/EVA4.5/views/resources/karate.jpeg" class="img-fluid custom-img rounded shadow mt-3" alt="karate">
             </div>
 
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center">
+                <div class="card p-3 shadow" style="width: 100%; max-width: 600px;">
+                    <div class="card-header text-center fw-bold">VISIÓN</div>
+                    <div class="card-body">
+                        <p class="card-text">Ser el punto de encuentro entre las personas y la actividad física, rompiendo las barreras del sedentarismo con una plataforma que transforma la manera en que se accede al deporte: rápida, intuitiva y al alcance de todos. Un espacio donde moverse, ejercitarse y cuidarse comienza con solo un clic desde cualquier dispositivo.</p>
+                    </div>
+                </div>
+                <img src="/EVA4.5/views/resources/chispun.jpg" class="img-fluid custom-img rounded shadow mt-3" alt="ejercicio">
+            </div>
         </div>
 
-        <div class="texto-objetivo">
+        <!-- Objetivo -->
+        <div class="texto-objetivo mt-5 text-center">
+            <h4 class="fw-bold mb-3 text-success">Nuestro Objetivo</h4>
             <p>
-                Nuestro objetivo es ayudar a que la gente conozca más zonas donde poder mejorar su salud tanto física como mental por medio del ejercicio. Para ello proporcionamos nuestra idea de que por medio de un mapa localices los centros deportivos, escuelas deportivas, parques, gimnasios, etc., más cercanos a tu ubicación.
+                Ayudar a que la gente conozca más zonas donde poder mejorar su salud tanto física como mental por medio del ejercicio. Proporcionamos nuestra idea de que por medio de un mapa localices los centros deportivos, escuelas deportivas, parques, gimnasios, etc., más cercanos a tu ubicación.
             </p>
         </div>
+
+        <!-- Sección de testimonios -->
+        <section class="mt-5">
+            <h2 class="text-center mb-4 fw-bold text-success">Testimonios de usuarios</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>"Gracias a E.V.A encontré un parque cerca de mi casa y ahora hago ejercicio todos los días."</p>
+                                <footer class="blockquote-footer mt-2">Juan P.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>"La plataforma me motivó a inscribirme en una escuela de natación. ¡Me siento mucho mejor!"</p>
+                                <footer class="blockquote-footer mt-2">Laura G.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>"Me encanta poder ver todos los centros deportivos en el mapa y elegir el que más me conviene."</p>
+                                <footer class="blockquote-footer mt-2">Carlos R.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de preguntas frecuentes -->
+        <section class="mt-5 mb-5">
+            <h2 class="text-center mb-4 fw-bold text-success">Preguntas Frecuentes</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card shadow border-0 h-100 faq-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-person-plus display-4 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">¿Cómo puedo registrarme en E.V.A?</h5>
+                            <p class="card-text">Haz clic en <b>Registrarse ahora</b> en el cuadro de inicio de sesión y completa el formulario con tus datos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow border-0 h-100 faq-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-trophy display-4 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">¿Qué deportes puedo practicar?</h5>
+                            <p class="card-text">Puedes encontrar fútbol, baloncesto, natación, karate, ciclismo, gimnasia y muchos más en los centros deportivos registrados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card shadow border-0 h-100 faq-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-geo-alt display-4 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">¿Cómo encuentro centros deportivos cerca de mí?</h5>
+                            <p class="card-text">Al iniciar sesión, accede al mapa interactivo y filtra por ubicación para ver los centros más cercanos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-3 mt-5">
+        <div class="footer-content text-center">
             <p>Contacto: kordhtx2305@gmail.com | Bogotá, Colombia</p>
             <p>© 2025 E.V.A - Todos los derechos reservados</p>
         </div>
     </footer>
-
 </div>
 
 <!-- VALIDACIÓN JS -->
-<script src="/EVA4.0/controllers/JS/validacion.js"></script>
+<script src="/EVA4.5/controllers/JS/validacion.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+
+
 
 
  <!--

@@ -1,0 +1,51 @@
+.ingreso {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #188c0b, #11a727);
+    text-align: center;
+    margin-top: 60px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+    from {
+        text-shadow: 0 0 5px rgb(37, 71, 8), 0 0 10px #0a8b49, 0 0 15px #059838;
+    }
+    to {
+        text-shadow: 0 0 10px rgb(1, 67, 1), 0 0 20px #23cd3c, 0 0 30px #04894d;
+    }
+}
+
+        .custom-navbar {
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            border-radius: 16px;
+        }
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+            font-size: 1.1rem;
+        }
+        /* Para el contenedor de selects */
+        .form-bg {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 40px;
+            margin-top: 32px;
+            min-width: 340px;   /* Más ancho */
+            min-height: 280px;  /* Más alto */
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Opcional: haz los selects más altos */
+        .form-select {
+            min-height: 48px;
+            font-size: 1.1rem;
+        }
+    

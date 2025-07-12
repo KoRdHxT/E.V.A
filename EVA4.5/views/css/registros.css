@@ -1,0 +1,68 @@
+body12 {
+  background-image: url("../resources/fondo3.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  z-index: -2; /* Asegura que el fondo esté detrás del contenido */
+}
+.tarjetas123 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 200px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.tarjetausuario,
+.tarjetaadministrador {
+  flex-shrink: 0; 
+  width: 320px;
+  padding: 25px;
+  background-color: rgb(41, 39, 39);
+  color: #f0ebeb;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 254, 254, 0.941);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tarjetausuario:hover,
+.tarjetaadministrador:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.909);
+}
+.contenedor-boton-simple {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.boton-simple {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: black;
+  color: #3dd33f;
+  border: 2px solid #1cd228;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-simple:hover {
+  background-color: #5cc55a;
+  color: #f9f9f9;
+}

@@ -1,39 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Usuario - E.V.A</title>
-    <link rel="stylesheet" href="/EVA4.0/views/css/Style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>inscripcion</title>
+  <link rel="stylesheet" href="/EVA4.5/views/css/Style.css">
 </head>
-<body>
-    <div class="navbar">
-        <a href="/EVA4.0/views/html/PaginaWeb.html">INICIO</a>
-        <a href="/EVA4.0/views/html/nosotros.html">NOSOTROS</a>
-        <a href="/EVA4.0/views/html/integrantes.html">INTEGRANTES</a> 
-        <a href="/EVA4.0/views/html/centros.html">CENTROS DEPORTIVOS</a>
-        <a href="/EVA4.0/views/html/graficos.html">VALORACIONES</a>
-        <a href="/EVA4.0/views/html/inscripcion.html">INSCRIPCIÓN</a>
+<body12>
+
+  <div class="tarjetas123">
+    
+    <div class="tarjetausuario">
+      <a href="/EVA4.5/views/html/inscripcionusuario.html" class="button">inscripcion de usuario</a>
+      <p style="color: white;">este boton te llevara a la inscripcion de usuario ¿quieres ingresar?</p>
+    </div>    
+
+    <div class="tarjetaadministrador ">
+      <a href="/EVA4.5/views/html/inscripcionadmin.html" class="button">inscripcion de Administrador Deportivo</a>
+      <p style="color: white;">este boton te llevara a la inscripcion de usuario administrador ¡solo administradores pueden acceder!</p>
     </div>
-
-    <h2 class="titulo">Registro de Usuario</h2>
-
-    <div class="container">
-        <div class="form-box2">
-            <form action="/EVA4.0/controllers/consultas/registrousuario.php" method="POST" onsubmit="return validarUsuario();">
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
-                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
-                <input type="password" id="contrasena" name="contrasena" placeholder="Elige una contraseña" required>
-                <button type="submit">Registrar</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="volver-container">
-        <a href="/EVA4.0/views/html/PaginaWeb.html" class="volver-btn">← Volver al Inicio</a>
-    </div>
-
-    <script src="/EVA4.0/controllers/JS/validacion.js"></script>
-</body>
-</html>
+    <div class="contenedor-boton-simple">
+  <a href="/EVA4.5/views/html/PaginaWeb.html" class="boton-simple">Volver al inicio</a>
+</div>
+  </div>
+</body12>
+</html
